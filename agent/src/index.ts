@@ -102,7 +102,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
 // import { dominosPlugin } from "@elizaos/plugin-dominos";
-import { evmCharacter } from "./evmCharacter";
+import { evmCharacter } from "./evmCharacter.ts";
 import givPlugin from "@elizaos/plugin-giv";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file

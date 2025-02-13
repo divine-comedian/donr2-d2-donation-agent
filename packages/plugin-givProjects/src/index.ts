@@ -1,9 +1,10 @@
 import { Plugin } from "@elizaos/core";
-// import { getBoostedProjectsAction } from "./actions/getBoostedProjects";
+import { getProjectsForReviewAction } from "./actions/getProjectsFOrReview";
+
 export const givProjectsPlugin: Plugin = {
     name: "givProjects",
-    actions: [],
-    description: "GIV Projects plugin",
+    actions: [getProjectsForReviewAction],
+    description: "GIV Review Projects plugin",
     evaluators: [],
     providers: [],
 };
