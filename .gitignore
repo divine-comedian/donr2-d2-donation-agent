@@ -1,6 +1,6 @@
 node_modules
 /out
-
+old.env
 .env
 .env.production
 .env.local
