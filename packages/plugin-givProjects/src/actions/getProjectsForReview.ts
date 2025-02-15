@@ -8,6 +8,8 @@ import {
     State,
     ModelClass,
     generateMessageResponse,
+    getModelSettings,
+    generateText,
 } from "@elizaos/core";
 
 import { getProjectsForReviewExamples } from "../examples";
@@ -68,13 +70,22 @@ export const getProjectsForReviewAction: Action = {
 
                 context += `\n\n${projectsList}\n`;
 
-                const projectValidationAnswer = await generateMessageResponse({
+                console.log(
+                    "Using model:",
+                    getModelSettings(runtime.modelProvider, ModelClass.LARGE)
+                );
+
+                const projectValidationAnswer = await generateText({
                     runtime,
                     context,
                     modelClass: ModelClass.LARGE,
                 });
+                console.log(
+                    "Project validation answer:",
+                    projectValidationAnswer
+                );
                 callback({
-                    text: projectValidationAnswer.text,
+                    text: projectValidationAnswer,
                 });
             }
             return true;

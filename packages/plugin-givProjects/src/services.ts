@@ -4,11 +4,18 @@ const GIVETH_PROD_URL = "https://mainnet.serve.giveth.io/graphql";
 
 export const createGivethGraphService = () => {
     const getProjects = async (
-        limit: number = 2
+        limit: number = 4
     ): Promise<ProjectsResponse> => {
         try {
             const query = `{
-                allProjects(sortingBy: InstantBoosting, limit: ${limit}, skip: 0) {
+                allProjects(
+                    limit: ${limit},
+                    skip: 0,
+                    sortingBy: Newest,
+                    filters: {
+                        reviewStatus: "NotReviewed"
+                    })
+                    {
                     projects {
                         title
                         slug
@@ -20,7 +27,6 @@ export const createGivethGraphService = () => {
                         status {
                             name
                         }
-                        reviewStatus
                     }
                 }
             }`;
@@ -32,6 +38,8 @@ export const createGivethGraphService = () => {
                 },
                 body: JSON.stringify({ query }),
             });
+
+            console.log("Response:", response);
 
             if (!response.ok) {
                 const errorData = await response.json();
