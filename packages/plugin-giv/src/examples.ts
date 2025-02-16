@@ -62,3 +62,70 @@ export const getProjectsExamples: ActionExample[][] = [
         },
     ],
 ];
+
+export const getPendingVouchedProjectsExamples: ActionExample[][] = [
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "What projects should get the vouched status?",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll check which projects should get the vouched status.",
+                action: "PENDING_VOUCHED_PROJECTS",
+            },
+        },
+    ],
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "What are the projects I should update their vouched status?",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "Let me check which projects should get the vouched status.",
+                action: "PENDING_VOUCHED_PROJECTS",
+            },
+        },
+    ],
+];
+
+export const getRecentDonationsExamples: ActionExample[][] = [
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "What are the recent donations to Giveth projects?",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll check the recent donations to Giveth projects.",
+                action: "RECENT_DONATIONS",
+            },
+        },
+    ],
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "Show me the latest 20 donations made on Giveth",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll check the latest 20 donations made on Giveth.",
+                action: "RECENT_DONATIONS",
+                take: 20,
+            },
+        },
+    ],
+];

@@ -29,26 +29,43 @@ export interface ProjectsResponse {
 export interface DeVouchAttestationsResponse {
     data: {
         projectAttestations: Array<{
-            id: string;
-            vouch: boolean;
             attestTimestamp: string;
-            comment: string;
             project: {
                 projectId: string;
-                totalVouches: number;
                 title: string;
-                source: string;
                 url: string;
+                attests: Array<{
+                    attestorOrganisation: {
+                        organisation: {
+                            id: string;
+                        };
+                        attestor: {
+                            id: string;
+                        };
+                    };
+                }>;
             };
-            attestorOrganisation: {
-                attestor: {
-                    id: string;
-                };
-                organisation: {
-                    id: string;
-                    name: string;
-                    color: string;
-                };
+        }>;
+    };
+}
+
+export interface ProjectByIdResponse {
+    data: {
+        projectById: {
+            title: string;
+            slug: string;
+            description: string;
+            verified: boolean;
+        };
+    };
+}
+
+export interface RecentDonationsResponse {
+    data: {
+        recentDonations: Array<{
+            valueUsd: number;
+            project: {
+                title: string;
             };
         }>;
     };
