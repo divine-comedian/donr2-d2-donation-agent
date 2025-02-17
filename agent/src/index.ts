@@ -133,27 +133,23 @@ import { openaiPlugin } from "@elizaos/plugin-openai";
 import nitroPlugin from "@elizaos/plugin-router-nitro";
 import { devinPlugin } from "@elizaos/plugin-devin";
 import { zksyncEraPlugin } from "@elizaos/plugin-zksync-era";
-<<<<<<< HEAD
 import { chainbasePlugin } from "@elizaos/plugin-chainbase";
 import { holdstationPlugin } from "@elizaos/plugin-holdstation";
 import { nvidiaNimPlugin } from "@elizaos/plugin-nvidia-nim";
 import { zxPlugin } from "@elizaos/plugin-0x";
 import { hyperbolicPlugin } from "@elizaos/plugin-hyperbolic";
-=======
 
 // import { OpacityAdapter } from "@elizaos/plugin-opacity";
 // import { openWeatherPlugin } from "@elizaos/plugin-open-weather";
 // import { stargazePlugin } from "@elizaos/plugin-stargaze";
 // import { akashPlugin } from "@elizaos/plugin-akash";
 // import { quaiPlugin } from "@elizaos/plugin-quai";
->>>>>>> divine-comedian/decentralized-verification
 import Database from "better-sqlite3";
 import fs from "fs";
 import net from "net";
 import path from "path";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
-<<<<<<< HEAD
 import { emailPlugin } from "@elizaos/plugin-email";
 import { emailAutomationPlugin } from "@elizaos/plugin-email-automation";
 import { seiPlugin } from "@elizaos/plugin-sei";
@@ -167,11 +163,9 @@ import { ankrPlugin } from "@elizaos/plugin-ankr";
 import { formPlugin } from "@elizaos/plugin-form";
 import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
-=======
 // import { dominosPlugin } from "@elizaos/plugin-dominos";
 import { evmCharacter } from "./evmCharacter";
 import givPlugin from "@elizaos/plugin-giv";
->>>>>>> divine-comedian/decentralized-verification
 
 import { trikonPlugin } from "@elizaos/plugin-trikon";
 import arbitragePlugin from "@elizaos/plugin-arbitrage";
@@ -341,13 +335,9 @@ async function jsonToCharacter(
 
     // .id isn't really valid
     const characterId = character.id || character.name;
-<<<<<<< HEAD
     const characterPrefix = `CHARACTER.${characterId
         .toUpperCase()
         .replace(/ /g, "_")}.`;
-=======
-    const characterPrefix = `CHARACTER.${characterId.toUpperCase().replace(/ /g, "_")}.`;
->>>>>>> divine-comedian/decentralized-verification
     const characterSettings = Object.entries(process.env)
         .filter(([key]) => key.startsWith(characterPrefix))
         .reduce((settings, [key, value]) => {
@@ -1037,6 +1027,7 @@ export async function createAgent(
         character,
         // character.plugins are handled when clients are added
         plugins: [
+            givPlugin,
             parseBooleanFromText(getSecret(character, "BITMIND")) &&
             getSecret(character, "BITMIND_API_TOKEN")
                 ? bittensorPlugin
@@ -1051,7 +1042,6 @@ export async function createAgent(
                 ? elizaCodeinPlugin
                 : null,
             bootstrapPlugin,
-<<<<<<< HEAD
             getSecret(character, "CDP_API_KEY_NAME") &&
             getSecret(character, "CDP_API_KEY_PRIVATE_KEY") &&
             getSecret(character, "CDP_AGENT_KIT_NETWORK")
@@ -1061,9 +1051,6 @@ export async function createAgent(
                 ? dexScreenerPlugin
                 : null,
             getSecret(character, "FOOTBALL_API_KEY") ? footballPlugin : null,
-=======
-            givPlugin,
->>>>>>> divine-comedian/decentralized-verification
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
                 : null,
@@ -1247,7 +1234,6 @@ export async function createAgent(
             getSecret(character, "AKASH_WALLET_ADDRESS")
                 ? akashPlugin
                 : null,
-<<<<<<< HEAD
             getSecret(character, "CHAINBASE_API_KEY") ? chainbasePlugin : null,
             getSecret(character, "QUAI_PRIVATE_KEY") ? quaiPlugin : null,
             getSecret(character, "RESERVOIR_API_KEY")
@@ -1332,10 +1318,6 @@ export async function createAgent(
         ]
             .flat()
             .filter(Boolean),
-=======
-            getSecret(character, "QUAI_PRIVATE_KEY") ? quaiPlugin : null,
-        ].filter(Boolean),
->>>>>>> divine-comedian/decentralized-verification
         providers: [],
         managers: [],
         cacheManager: cache,
@@ -1504,9 +1486,8 @@ const startAgents = async () => {
     const directClient = new DirectClient();
     let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
     const args = parseArguments();
-<<<<<<< HEAD
     const charactersArg = args.characters || args.character;
-    let characters = [defaultCharacter];
+    let characters = [evmCharacter];
 
     if (process.env.IQ_WALLET_ADDRESS && process.env.IQSOlRPC) {
         characters = await loadCharacterFromOnchain();
@@ -1517,10 +1498,6 @@ const startAgents = async () => {
     if ((notOnchainJson && charactersArg) || hasValidRemoteUrls()) {
         characters = await loadCharacters(charactersArg);
     }
-=======
-    let charactersArg = args.characters || args.character;
-    let characters = [evmCharacter];
->>>>>>> divine-comedian/decentralized-verification
 
     // Normalize characters for injectable plugins
     characters = await Promise.all(characters.map(normalizeCharacter));
@@ -1567,7 +1544,6 @@ const startAgents = async () => {
 startAgents().catch((error) => {
     elizaLogger.error("Unhandled error in startAgents:", error);
     process.exit(1);
-<<<<<<< HEAD
 });
 
 // Prevent unhandled exceptions from crashing the process if desired
@@ -1585,6 +1561,3 @@ if (
         console.error("unhandledRejection", err);
     });
 }
-=======
-}); // Fixed missing closing parenthesis
->>>>>>> divine-comedian/decentralized-verification

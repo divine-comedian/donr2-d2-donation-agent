@@ -1,4 +1,5 @@
 packages:
-  - 'packages/*'
-  - 'packages/adapter-supabase'
-  - 'packages/plugin-*' 
+    - "docs"
+    - "packages/*"
+    - "client"
+    - "agent"

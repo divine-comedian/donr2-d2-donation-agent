@@ -19,8 +19,8 @@ type TakeAmount = {
 };
 
 const getRecentDonationsTemplate = `
-    Review the recent messages from the conversation:
-        {{recentMessages}}
+   TASK: Review the last 2 messages from {{senderName}} in the conversation.
+        
     Your purpose is to extract the number of recent donations to lookup for and return that inside an object.
     generate an object with the following format:
     \`\`\`json
@@ -28,13 +28,10 @@ const getRecentDonationsTemplate = `
         "number": number
     }
     \`\`\`
-
-    If the user doesn't specify a number, respond with the latest 50 donations.
+    Do not respond with any other text than the object.
+    If the user doesn't specify a number, respond with the latest 100 donations.
     If the user specifies a number, respond with that many donations.
-    If the number is greater than 50, respond with the latest 50 donations.
-
-
-
+    If the number is greater than 100, respond with the latest 100 donations.
 `;
 
 export const getRecentDonations: Action = {
@@ -95,19 +92,37 @@ export const getRecentDonations: Action = {
             const recentDonationsData = recentDonations.data.recentDonations;
             const sortedDonations = [...recentDonationsData].sort(
                 (a, b) => (b.valueUsd || 0) - (a.valueUsd || 0)
-            );
+            );  
 
-            let outputContext = ` Take the final result of all the recent donations, sorted by highest USD value, and respond to the user in your chartacter. Use bullet points and markdown formatting. Here are the recent donations to Giveth projects:\n";
-            ${sortedDonations.forEach((donation) => {
-                console.log(donation);
-                outputContext += `- *${donation.project.title}* - $${donation.valueUsd} USD\n`;
-            })} Summarize the donations in an easily digestible way, using bullet points and markdown formatting to highlight the project titles. Use appropriate emojis for high value donations. Be concise and to the point.`;
+            // Aggregate Giveth Community of Makers donations
+            const makersDonations = sortedDonations.filter(
+                donation => donation.project.title === "Giveth Community of Makers"
+            );
+            const makersTotal = makersDonations.reduce(
+                (sum, donation) => sum + (donation.valueUsd || 0), 
+                0
+            );
+            
+            // Remove individual makers donations and add aggregated total
+            const consolidatedDonations = sortedDonations
+                .filter(donation => donation.project.title !== "Giveth Community of Makers")
+                .concat(makersTotal > 0 ? [{
+                    project: { title: "Giveth Community of Makers" },
+                    valueUsd: makersTotal
+                }] : []);
+            // console.log("consolidatedDonations", consolidatedDonations);
+            let outputContext = ` Take the final result of all the recent donations, sorted by highest USD value, be sure to include any donations worth more than $5 in your response
+             and respond to the user in your character. Use bullet points and markdown formatting, highlighting the project titles in bold and the amounts
+              in regular text. Here are the recent donations to Giveth projects:\n
+            ${consolidatedDonations.map((donation) => `- *${donation.project.title}* - $${donation.valueUsd} USD`).join("\n")}
+             Summarize the donations in an easily digestible way. Use appropriate emojis for high value donations. Be concise and to the point.`;
+            
             const outputText = await generateText({
                 runtime,
                 context: outputContext,
                 modelClass: ModelClass.SMALL,
             });
-
+            console.log("outputText", outputText);
             await callback({
                 text: outputText,
             });

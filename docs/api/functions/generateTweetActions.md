@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7](../index.md) / generateTweetActions
+[@elizaos/core v0.25.6-alpha.1](../index.md) / generateTweetActions
 
 # Function: generateTweetActions()
 
@@ -12,7 +12,7 @@
 
 • **\_\_namedParameters.context**: `string`
 
-• **\_\_namedParameters.modelClass**: `string`
+• **\_\_namedParameters.modelClass**: [`ModelClass`](../enumerations/ModelClass.md)
 
 ## Returns
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:1898](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1898)
+[packages/core/src/generation.ts:2579](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2579)
