@@ -3,11 +3,12 @@ import {
     DeVouchAttestationsResponse,
     ProjectByIdResponse,
     RecentDonationsResponse,
+    KarmaAPIResponse,
 } from "./types";
 
 const GIVETH_PROD_URL = "https://mainnet.serve.giveth.io/graphql";
 const DEVOUCH_PROD_URL = "https://optimism.backend.devouch.xyz/graphql";
-
+const KARMA_SEARCH_API_URL = "https://gapapi.karmahq.xyz/search?q=";
 export const createGivethGraphService = () => {
     const getProjects = async (
         limit: number = 10
@@ -259,10 +260,89 @@ query getRecentDonations {
         }
     };
 
+    const getProjectsByCategory = async (
+        category: string,
+        limit: number,
+        sortingBy: string,
+        mainCategory: string
+    ): Promise<ProjectsResponse> => {
+        try {
+            const query = `
+                query FetchProjectsByCategory(
+      $limit: Int,
+      $sortingBy: SortingField,
+      $mainCategory: String,
+      $category: String
+    ) {
+      allProjects(
+        limit: ${limit},
+        sortingBy: ${sortingBy},
+        mainCategory: ${mainCategory},
+        category: ${category}
+      ) {
+        projects {
+          title
+          description
+          qualityScore
+        }
+      }
+    }`;
+    const response = await fetch(GIVETH_PROD_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query }),
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+            errorData?.errors?.[0]?.message ||
+                errorData?.message ||
+                `HTTP error! status: ${response.status}`
+        );
+    }
+
+    const data = await response.json();
+
+    // Validate that the response has the expected structure
+    if (!data?.data?.recentDonations) {
+        throw new Error("Invalid response structure from Giveth API");
+    }
+
+    return data;
+} catch (error) {
+    if (error instanceof Error) {
+        console.error("Giveth API Error:", error.message);
+    } else {
+        console.error("Unexpected error:", error);
+    }
+    throw error;
+        }
+    };
+
+    const getKarmaProjects = async (searchTerm: string): Promise<KarmaAPIResponse> => {
+        try {
+            const response = await fetch(KARMA_SEARCH_API_URL + searchTerm);
+            const data = await response.json();
+            return data;
+        }
+        catch (error) {
+            if (error instanceof Error) {
+                console.error("Karma API Error:", error.message);
+            } else {
+                console.error("Unexpected error:", error);
+            }
+        }
+    };
+
     return {
         getProjects,
         getDeVouchAttestations,
         getProjectById,
         getRecentDonations,
+        getProjectsByCategory,
+        getKarmaProjects,
     };
 };
