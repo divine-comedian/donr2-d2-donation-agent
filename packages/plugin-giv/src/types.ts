@@ -8,6 +8,7 @@ export interface ProjectAddress {
 export interface Project {
     title: string;
     slug: string;
+    id?: string;
     description: string;
     addresses: ProjectAddress[];
 }
@@ -136,6 +137,30 @@ export interface KarmaAPIResponse {
     communities: KarmaCommunity[];
     projects: KarmaProject[];
   }
+
+
+export interface Transaction {
+    hash?: string;
+    from: string;
+    to: string;
+    value?: string;
+    data?: string;
+    chainId?: number;
+}
+
+export interface Donation {
+    projectId: string;
+    recipient: string;
+    amount: bigint;
+    tokenAddress?: string;
+}
+
+export interface Donations {
+  projectIds: string[];
+  recipients: string[];
+  amounts: bigint[];
+  tokenAddress?: string
+}
 // Enum for sorting options
   
   // Usage example:

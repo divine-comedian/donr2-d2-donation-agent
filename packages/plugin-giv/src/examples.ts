@@ -129,3 +129,67 @@ export const getRecentDonationsExamples: ActionExample[][] = [
         },
     ],
 ];
+
+export const donateTopBoostedExamples: ActionExample[][] = [
+    [
+        {
+            user: "{{user1}}",
+            content: {
+
+                text: "Send a donation to the top boosted project on Giveth.",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll help you donate to the top boosted project on Giveth.",
+                action: "DONATE_TOP_BOOSTED",
+            },
+        },
+    ],
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "Can you donate to the project with the most GIVpower?", 
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll help you donate to the project with the highest GIVpower boost.",
+                action: "DONATE_TOP_BOOSTED",
+            },
+        },
+    ],
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "Send out a tip to the top project on Giveth",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll assist you in donating to the most boosted project on Giveth.",
+                action: "DONATE_TOP_BOOSTED", 
+            },
+        },
+    ],
+    [
+        {
+            user: "{{user1}}",
+            content: {
+                text: "Send some tokens to the top boosted project on Giveth.",
+            },
+        },
+        {
+            user: "{{agent}}",
+            content: {
+                text: "I'll help you donate to the top boosted project on Giveth.",
+                action: "DONATE_TOP_BOOSTED",
+            },
+        },
+    ],
+];
