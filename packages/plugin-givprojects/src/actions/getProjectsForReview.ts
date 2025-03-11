@@ -50,14 +50,21 @@ export const getProjectsForReviewAction: Action = {
             if (callback) {
                 const projects = ProjectsData.data.allProjects.projects;
 
-                let context = `###Projects review###\nYou will check the following projects and give a review for each of them. If their review ok with their status, you will approve them. If not, you will reject them. You will also check if the project is a scam or not.`;
-                context += `You will anwer me something like this:\n\n`;
+                let context = `###Projects review###\nYou will check the following projects and give a review for each of them. If their review ok with their status,
+                 you will approve them. If not, you will reject them. You will also check if the project is a scam or not.
+                  In addition provide a one sentence description of the project.`;
+                context += `You will answer me something like this:\n\n`;
                 context += `
                             ## Found ${projects.length} projects needing to be reviewed
-                            project A - all good\n
-                            project B - no issues found.\n
-                            project C - contains references to illegal gambling\n
-                            project D - looks like phishing scam because x \n`;
+                            **{projectTitle}** - all good.\n
+                            {one sentence description of the project}
+                            **{projectTitle}** - no issues found.\n
+                            {one sentence description of the project}
+                            **{projectTitle}** - contains references to illegal gambling\n
+                            {one sentence description of the project}
+                            **{projectTitle}** - looks like phishing scam because x \n
+                            {one sentence description of the project}
+                            `;
 
                 context += `\n\n###Projects list###\n`;
 

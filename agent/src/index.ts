@@ -164,9 +164,8 @@ import { formPlugin } from "@elizaos/plugin-form";
 import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
 // import { dominosPlugin } from "@elizaos/plugin-dominos";
-import { evmCharacter } from "./evmCharacter.ts";
-import givPlugin from "@elizaos/plugin-giv";
-
+// import { donr2d2Character } from "./donr2d2Character.ts";
+import { donr2d2Character } from "./donr2d2Character.ts";
 import { trikonPlugin } from "@elizaos/plugin-trikon";
 import arbitragePlugin from "@elizaos/plugin-arbitrage";
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -492,7 +491,7 @@ export async function loadCharacters(
 
     if (loadedCharacters.length === 0) {
         elizaLogger.info("No characters found, using default character");
-        loadedCharacters.push(evmCharacter);
+        loadedCharacters.push(donr2d2Character);
     }
 
     return loadedCharacters;
@@ -1027,7 +1026,6 @@ export async function createAgent(
         character,
         // character.plugins are handled when clients are added
         plugins: [
-            givPlugin,
             parseBooleanFromText(getSecret(character, "BITMIND")) &&
             getSecret(character, "BITMIND_API_TOKEN")
                 ? bittensorPlugin
@@ -1487,7 +1485,7 @@ const startAgents = async () => {
     let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
     const args = parseArguments();
     const charactersArg = args.characters || args.character;
-    let characters = [evmCharacter];
+    let characters = [donr2d2Character];
 
     if (process.env.IQ_WALLET_ADDRESS && process.env.IQSOlRPC) {
         characters = await loadCharacterFromOnchain();

@@ -5,7 +5,7 @@ import { getRecentDonations } from "./actions/getRecentDonations";
 
 export const givPlugin: Plugin = {
     name: "giv",
-    actions: [getPendingVouchedProjects, getRecentDonations],
+    actions: [getPendingVouchedProjects, getRecentDonations, getBoostedProjectsAction],
     description: "GIV plugin",
     evaluators: [],
     providers: [],

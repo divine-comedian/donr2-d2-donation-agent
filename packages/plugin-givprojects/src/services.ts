@@ -8,28 +8,21 @@ export const createGivethGraphService = () => {
     ): Promise<ProjectsResponse> => {
         try {
             const query = `{
-                allProjects(
-                    limit: ${limit},
-                    skip: 0,
-                    sortingBy: Newest,
-                    filters: {
-                        reviewStatus: "NotReviewed"
-                    })
-                    {
-                    projects {
-                        title
-                        slug
-                        description
-                        addresses {
-                            address
-                            networkId
-                        }
-                        status {
-                            name
-                        }
-                    }
-                }
-            }`;
+    allProjects(
+        limit: ${limit},    
+        skip: 0
+        sortingBy: Newest
+        filterBy: { field: Verified, value: false }
+    ) {
+        projects {
+            title
+            slug
+            description
+            verified
+            reviewStatus
+        }
+    }
+}`;
 
             const response = await fetch(GIVETH_PROD_URL, {
                 method: "POST",
