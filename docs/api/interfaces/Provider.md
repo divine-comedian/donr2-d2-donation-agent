@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7](../index.md) / Provider
+[@elizaos/core v0.25.6-alpha.1](../index.md) / Provider
 
 # Interface: Provider
 
@@ -26,4 +26,4 @@ Data retrieval function
 
 #### Defined in
 
-[packages/core/src/types.ts:475](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L475)
+[packages/core/src/types.ts:506](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L506)

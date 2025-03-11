@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7](../index.md) / parseJsonArrayFromText
+[@elizaos/core v0.25.6-alpha.1](../index.md) / parseJsonArrayFromText
 
 # Function: parseJsonArrayFromText()
 
@@ -23,4 +23,4 @@ An array parsed from the JSON string if successful; otherwise, null.
 
 ## Defined in
 
-[packages/core/src/parsing.ts:82](https://github.com/elizaOS/eliza/blob/main/packages/core/src/parsing.ts#L82)
+[packages/core/src/parsing.ts:85](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/parsing.ts#L85)

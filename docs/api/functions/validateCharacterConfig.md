@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7](../index.md) / validateCharacterConfig
+[@elizaos/core v0.25.6-alpha.1](../index.md) / validateCharacterConfig
 
 # Function: validateCharacterConfig()
 
@@ -16,4 +16,4 @@ Validation function
 
 ## Defined in
 
-[packages/core/src/environment.ts:138](https://github.com/elizaOS/eliza/blob/main/packages/core/src/environment.ts#L138)
+[packages/core/src/environment.ts:161](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/environment.ts#L161)

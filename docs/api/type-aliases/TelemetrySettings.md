@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7](../index.md) / TelemetrySettings
+[@elizaos/core v0.25.6-alpha.1](../index.md) / TelemetrySettings
 
 # Type Alias: TelemetrySettings
 
@@ -38,4 +38,4 @@ Identifier for this function. Used to group telemetry data by function.
 
 ## Defined in
 
-[packages/core/src/types.ts:634](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L634)
+[packages/core/src/types.ts:672](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L672)
