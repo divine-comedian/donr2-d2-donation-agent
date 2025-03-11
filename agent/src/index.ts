@@ -169,7 +169,7 @@ import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
 =======
 // import { dominosPlugin } from "@elizaos/plugin-dominos";
-import { evmCharacter } from "./evmCharacter";
+import { evmCharacter } from "./evmCharacter.ts";
 import givPlugin from "@elizaos/plugin-giv";
 >>>>>>> divine-comedian/decentralized-verification
 
