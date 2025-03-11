@@ -50,32 +50,7 @@ export const getProjectsForReviewAction: Action = {
             if (callback) {
                 const projects = ProjectsData.data.allProjects.projects;
 
-                let context = `###Projects review###\nYou will check the following projects and give a review for each of them. If their review ok with their status,
-                 you will approve them. If not, you will reject them. You will also check if the project is a scam or not.
-                  In addition provide a one sentence description of the project.`;
-                context += `You will answer me something like this:\n\n`;
-                context += `
-                            ## Found ${projects.length} projects needing to be reviewed
-                            **{projectTitle}** - all good.\n
-                            {one sentence description of the project}
-                            **{projectTitle}** - no issues found.\n
-                            {one sentence description of the project}
-                            **{projectTitle}** - contains references to illegal gambling\n
-                            {one sentence description of the project}
-                            **{projectTitle}** - looks like phishing scam because x \n
-                            {one sentence description of the project}
-                            `;
-
-                context += `\n\n###Projects list###\n`;
-
-                const projectsList = projects
-                    .map(
-                        (project) =>
-                            `• Project title: ${project.title} \n Project description: ${project.description}`
-                    )
-                    .join("\n");
-
-                context += `\n\n${projectsList}\n`;
+                const projectReviewPrompt = buildProjectReviewPrompt(projects);
 
                 console.log(
                     "Using model:",
@@ -84,7 +59,7 @@ export const getProjectsForReviewAction: Action = {
 
                 const projectValidationAnswer = await generateText({
                     runtime,
-                    context,
+                    context: projectReviewPrompt,
                     modelClass: ModelClass.LARGE,
                 });
                 console.log(
@@ -107,3 +82,33 @@ export const getProjectsForReviewAction: Action = {
     },
     examples: getProjectsForReviewExamples as ActionExample[][],
 } as Action;
+
+function buildProjectReviewPrompt(projects) {
+    const baseSlug = "https://giveth.io/project/";
+    const template = `
+###Projects review###
+You will check the following projects and give a review for each of them. If their review is consistent with their status, you will approve them. If not, you will reject them. You will also check if the project is a scam or not. In addition, provide a one sentence description of the project.
+
+You will answer me something like this:
+
+## Found ${projects.length} projects needing to be reviewed
+**[{projectTitle}](projectLink)** - all good.
+{one sentence description of the project}
+
+**[{projectTitle}](projectLink)** - no issues found.
+{one sentence description of the project}
+
+**[{projectTitle}](projectLink)** - contains references to illegal gambling
+{one sentence description of the project}
+
+**[{projectTitle}](projectLink)** - looks like phishing scam because x
+{one sentence description of the project}
+
+###Projects list###
+${projects.map(project => 
+  `• Project title: ${project.title}\n  Project description: ${project.description}, projectLink: ${baseSlug}${project.slug}`
+).join("\n\n")}
+`;
+
+    return template.trim();
+}
