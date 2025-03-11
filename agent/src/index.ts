@@ -164,7 +164,7 @@ import { formPlugin } from "@elizaos/plugin-form";
 import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
 // import { dominosPlugin } from "@elizaos/plugin-dominos";
-import { evmCharacter } from "./evmCharacter";
+import { evmCharacter } from "./evmCharacter.ts";
 import givPlugin from "@elizaos/plugin-giv";
 
 import { trikonPlugin } from "@elizaos/plugin-trikon";

@@ -117,6 +117,7 @@
         "@elizaos/plugin-akash": "workspace:*",
         "@elizaos/plugin-quai": "workspace:*",
         "@elizaos/plugin-giv": "workspace:*",
+        "@elizaos/plugin-givprojects": "workspace:*",
         "@elizaos/plugin-lightning": "workspace:*",
         "@elizaos/plugin-b2": "workspace:*",
         "@elizaos/plugin-nft-collections": "workspace:*",
