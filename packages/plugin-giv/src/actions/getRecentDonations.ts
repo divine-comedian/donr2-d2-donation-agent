@@ -19,7 +19,7 @@ type TakeAmount = {
 };
 
 const getRecentDonationsTemplate = `
-   TASK: Review the last 2 messages from {{senderName}} in the conversation.
+   TASK: Review the last 2 messages from {{recentMessages}} in the conversation.
         
     Your purpose is to extract the number of recent donations to lookup for and return that inside an object.
     generate an object with the following format:

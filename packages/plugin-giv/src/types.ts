@@ -9,8 +9,8 @@ export interface Project {
     title: string;
     slug: string;
     id?: string;
-    description: string;
-    addresses: ProjectAddress[];
+    description?: string;
+    addresses?: ProjectAddress[];
 }
 
 /** Represents the projects list response from the Giveth API */
@@ -72,6 +72,11 @@ export interface RecentDonationsResponse {
         }>;
     };
 }
+
+export type NumberObject = {
+  number: number;
+};
+
 
 // Karma types
 

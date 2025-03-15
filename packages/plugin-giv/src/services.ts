@@ -15,6 +15,8 @@ import { createWalletClient, createPublicClient, http } from 'viem'
 import DonationHandlerABI from "../abi/DonationHandler.json";
 import IERC20ABI from "../abi/IERC20.json";
 import { celoAlfajores, Chain } from "viem/chains";
+import { composeContext, State, ModelClass, IAgentRuntime, generateObjectDeprecated } from "@elizaos/core";
+
 const GIVETH_PROD_URL = "https://mainnet.serve.giveth.io/graphql";
 const DEVOUCH_PROD_URL = "https://optimism.backend.devouch.xyz/graphql";
 const KARMA_SEARCH_API_URL = "https://gapapi.karmahq.xyz/search?q=";
@@ -74,20 +76,16 @@ export const createGivethGraphService = () => {
     };
 
     const getDeVouchAttestations = async (
-        limit: number = 50,
+        limit: number,
         offset: number = 0,
         organisation_id: string = "0xf63f2a7159ee674aa6fce42196a8bb0605eafcf20c19e91a7eafba8d39fa0404"
     ): Promise<DeVouchAttestationsResponse> => {
         try {
             const query = `
-                query fetchLatestAttests(
-  $offset: Int!,
-  $limit: Int,
-  $organisation_id: String!
-) {
+                {
   projectAttestations(
-    offset: $offset,
-    limit: $limit,
+    offset: ${offset},
+    limit: ${limit},
     orderBy: attestTimestamp_DESC,
     where: {
       vouch_eq: true,
@@ -96,7 +94,7 @@ export const createGivethGraphService = () => {
       },
       attestorOrganisation: {
         organisation: {
-          id_eq: $organisation_id
+          id_eq: "${organisation_id}"
         }
       }
     }
@@ -110,7 +108,7 @@ export const createGivethGraphService = () => {
         where: {
           attestorOrganisation: {
             organisation: {
-              id_eq: $organisation_id
+              id_eq: "${organisation_id}"
             }
           }
         }
@@ -130,18 +128,18 @@ export const createGivethGraphService = () => {
   }
 }`;
 
-            const variables = {
-                limit,
-                offset,
-                organisation_id,
-            };
+            // const variables = {
+            //     limit,
+            //     offset,
+            //     organisation_id,
+            // };
 
             const response = await fetch(DEVOUCH_PROD_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ query, variables }),
+                body: JSON.stringify({ query }),
             });
 
             if (!response.ok) {
@@ -161,6 +159,7 @@ export const createGivethGraphService = () => {
             }
             if (data) {
                 console.log(data.data?.projectAttestations[0].project.title);
+                console.log(data.data?.projectAttestations[0].attestTimestamp);
             }
             return data;
         } catch (error) {
@@ -180,6 +179,7 @@ export const createGivethGraphService = () => {
             const query = `query {
     projectById(id: ${projectId}) {
         title
+        slug
         verified
     }
 }`;
@@ -476,3 +476,22 @@ export const DonationHandlerService = (privateKey: string) => {
         sendDonation
     }
 }
+
+export const generateInput = async (
+    runtime: IAgentRuntime,
+    state: State,
+    template: string
+): Promise<any> => {
+    const recentDonationsContext = composeContext({
+        state,
+        template: template,
+    });
+
+    const input = (await generateObjectDeprecated({
+        runtime,
+        context: recentDonationsContext,
+        modelClass: ModelClass.SMALL,
+    })) as any;
+
+    return input;
+};
