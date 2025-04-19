@@ -30,9 +30,18 @@ import {
 } from "discord.js";
 import type { State } from "@elizaos/core";
 import type { ActionResponse } from "@elizaos/core";
-import { MediaData } from "./types.ts";
-
+import type { MediaData } from "./types.ts";
+import { promoteTopProjectAction } from "./givStuff/promoteTopProject.ts";
 const MAX_TIMELINES_TO_FETCH = 15;
+
+// async DraftPromotionTweet() {
+//     const givethGraphService = createGivethGraphService();
+//     const topProjects = await givethGraphService.getProjects(10);
+//     const randomNumber = Math.floor(Math.random() * topProjects.data.allProjects.projects.length);
+//     const project = topProjects.data.allProjects.projects[randomNumber];
+//     console.log("project\n\n", project);
+// }
+
 
 const twitterPostTemplate = `
 # Areas of Expertise
@@ -498,8 +507,7 @@ export class TwitterPostClient {
      * Generates and posts a new tweet. If isDryRun is true, only logs what would have been posted.
      */
     async generateNewTweet() {
-        elizaLogger.log("Generating new tweet");
-
+        elizaLogger.log("Generating new giveth tweet");
         try {
             const roomId = stringToUuid(
                 "twitter_generate_room-" + this.client.profile.username
@@ -510,9 +518,10 @@ export class TwitterPostClient {
                 this.runtime.character.name,
                 "twitter"
             );
-
+            
             const topics = this.runtime.character.topics.join(", ");
             const maxTweetLength = this.client.twitterConfig.MAX_TWEET_LENGTH;
+            const minTweetLength = 250;
             const state = await this.runtime.composeState(
                 {
                     userId: this.runtime.agentId,
@@ -526,68 +535,70 @@ export class TwitterPostClient {
                 {
                     twitterUserName: this.client.profile.username,
                     maxTweetLength,
+                    minTweetLength,
                 }
             );
-
+            
             const context = composeContext({
                 state,
                 template:
-                    this.runtime.character.templates?.twitterPostTemplate ||
-                    twitterPostTemplate,
+                this.runtime.character.templates?.twitterPostTemplate ||
+                twitterPostTemplate,
             });
 
             elizaLogger.debug("generate post prompt:\n" + context);
-
-            const response = await generateText({
-                runtime: this.runtime,
-                context,
-                modelClass: ModelClass.SMALL,
-            });
-
-            const rawTweetContent = cleanJsonResponse(response);
-
+            
+            // const response = await generateText({
+            //     runtime: this.runtime,
+            //     context,
+            //     modelClass: ModelClass.SMALL,
+            // });
+            
+            // const rawTweetContent = cleanJsonResponse(response);
+            
             // First attempt to clean content
-            let tweetTextForPosting = null;
-            let mediaData = null;
-
+            const tweetTextForPosting = null;
+            let promotionTweet = await promoteTopProjectAction(state, this.runtime);
+            const mediaData = null;
+            console.log("promotionTweet\n\n", promotionTweet);
             // Try parsing as JSON first
-            const parsedResponse = parseJSONObjectFromText(rawTweetContent);
-            if (parsedResponse?.text) {
-                tweetTextForPosting = parsedResponse.text;
-            } else {
-                // If not JSON, use the raw text directly
-                tweetTextForPosting = rawTweetContent.trim();
-            }
+            // // const parsedResponse = parseJSONObjectFromText(rawTweetContent);
+            // // if (parsedResponse?.text) {
+            // //     promotionTweet = parsedResponse.text;
+            // // } else {
+            // //     // If not JSON, use the raw text directly
+            // //     promotionTweet = rawTweetContent.trim();
+            // // }
 
-            if (
-                parsedResponse?.attachments &&
-                parsedResponse?.attachments.length > 0
-            ) {
-                mediaData = await fetchMediaData(parsedResponse.attachments);
-            }
+            // if (
+            //     parsedResponse?.attachments &&
+            //     parsedResponse?.attachments.length > 0
+            // ) {
+            //     mediaData = await fetchMediaData(parsedResponse.attachments);
+            // }
 
             // Try extracting text attribute
-            if (!tweetTextForPosting) {
-                const parsingText = extractAttributes(rawTweetContent, [
-                    "text",
-                ]).text;
-                if (parsingText) {
-                    tweetTextForPosting = truncateToCompleteSentence(
-                        extractAttributes(rawTweetContent, ["text"]).text,
-                        this.client.twitterConfig.MAX_TWEET_LENGTH
-                    );
-                }
-            }
+            // if (!promotionTweet) {
+            //     const parsingText = extractAttributes(rawTweetContent, [
+            //         "text",
+            //     ]).text;
+            //     if (parsingText) {
+            //         promotionTweet = truncateToCompleteSentence(
+            //             extractAttributes(rawTweetContent, ["text"]).text,
+            //             this.client.twitterConfig.MAX_TWEET_LENGTH
+            //         );
+            //     }
+            // }
 
-            // Use the raw text
-            if (!tweetTextForPosting) {
-                tweetTextForPosting = rawTweetContent;
-            }
+            // // Use the raw text
+            // if (!promotionTweet) {
+            //     promotionTweet = rawTweetContent;
+            // }
 
             // Truncate the content to the maximum tweet length specified in the environment settings, ensuring the truncation respects sentence boundaries.
             if (maxTweetLength) {
-                tweetTextForPosting = truncateToCompleteSentence(
-                    tweetTextForPosting,
+                promotionTweet = truncateToCompleteSentence(
+                    promotionTweet,
                     maxTweetLength
                 );
             }
@@ -598,13 +609,13 @@ export class TwitterPostClient {
             const fixNewLines = (str: string) => str.replaceAll(/\\n/g, "\n\n"); //ensures double spaces
 
             // Final cleaning
-            tweetTextForPosting = removeQuotes(
-                fixNewLines(tweetTextForPosting)
+            promotionTweet = removeQuotes(
+                fixNewLines(promotionTweet)
             );
 
             if (this.isDryRun) {
                 elizaLogger.info(
-                    `Dry run: would have posted tweet: ${tweetTextForPosting}`
+                    `Dry run: would have posted tweet: ${promotionTweet}`
                 );
                 return;
             }
@@ -613,24 +624,24 @@ export class TwitterPostClient {
                 if (this.approvalRequired) {
                     // Send for approval instead of posting directly
                     elizaLogger.log(
-                        `Sending Tweet For Approval:\n ${tweetTextForPosting}`
+                        `Sending Tweet For Approval:\n ${promotionTweet}`
                     );
                     await this.sendForApproval(
-                        tweetTextForPosting,
+                        promotionTweet,
                         roomId,
-                        rawTweetContent
+                        promotionTweet
                     );
                     elizaLogger.log("Tweet sent for approval");
                 } else {
                     elizaLogger.log(
-                        `Posting new tweet:\n ${tweetTextForPosting}`
+                        `Posting new tweet:\n ${promotionTweet}`
                     );
                     this.postTweet(
                         this.runtime,
                         this.client,
-                        tweetTextForPosting,
+                        promotionTweet,
                         roomId,
-                        rawTweetContent,
+                        promotionTweet,
                         this.twitterUsername,
                         mediaData
                     );

@@ -1,17 +1,17 @@
 import {
     elizaLogger,
-    Action,
-    ActionExample,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    State,
+    type Action,
+    type ActionExample,
+    type HandlerCallback,
+    type IAgentRuntime,
+    type Memory,
+    type State,
 } from "@elizaos/core";
 import { donateTopBoostedExamples } from "../examples";
 import { createGivethGraphService } from "../services";
 import { DonationHandlerService } from "../services";
 import { DonationHandlerAddress } from "../constants";
-import { Donation } from "../types";
+import type { Donation } from "../types";
 import { celoAlfajores } from "viem/chains";
 import { parseEther } from "viem";
 export const donateTopBoostedAction: Action = {
@@ -37,7 +37,7 @@ export const donateTopBoostedAction: Action = {
                 const donation: Donation = {
                     recipient: address.address,
                     amount: parseEther("0.01"),
-                    projectId: topProject.id,
+                    projectId: topProject.id.toString(),
                 }
                 const donationHash = await donationHandlerService.sendDonation(donation, celoAlfajores);
                 console.log("donationHash", donationHash)

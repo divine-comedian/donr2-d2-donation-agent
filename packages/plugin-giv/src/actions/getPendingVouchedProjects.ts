@@ -1,11 +1,11 @@
 import {
     elizaLogger,
-    Action,
-    ActionExample,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    State,
+    type Action,
+    type ActionExample,
+    type HandlerCallback,
+    type IAgentRuntime,
+    type Memory,
+    type State,
     ModelClass,
     generateObjectDeprecated,
     composeContext,
@@ -13,7 +13,7 @@ import {
 } from "@elizaos/core";
 import { getPendingVouchedProjectsExamples } from "../examples";
 import { createGivethGraphService, generateInput } from "../services";
-import { NumberObject, Project } from "../types";
+import type { NumberObject, Project } from "../types";
 
 const getVouchedThresholdTemplate = `
    TASK: Review the last 2 messages from {{recentMessages}} in the conversation that were sent by the user.
@@ -48,7 +48,7 @@ export const getPendingVouchedProjects: Action = {
     ) => {
         const givethService = createGivethGraphService();
         const limit: number = 100;
-        let unverifiedProjects: Set<Project> = new Set<Project>();
+        const unverifiedProjects: Set<Project> = new Set<Project>();
 
         const buildTargetVouches = async (
             runtime: IAgentRuntime,
@@ -84,7 +84,7 @@ export const getPendingVouchedProjects: Action = {
             // Check verification status for each project
             for (const project of projectsWithEnoughVouches) {
                 const projectResponse = await givethService.getProjectById(
-                    parseInt(project.project.projectId)
+                    Number.parseInt(project.project.projectId)
                 );
 
                 if (!projectResponse.data.projectById.verified) {

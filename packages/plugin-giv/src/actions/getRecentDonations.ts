@@ -1,11 +1,11 @@
 import {
     elizaLogger,
-    Action,
-    ActionExample,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    State,
+    type Action,
+    type ActionExample,
+    type HandlerCallback,
+    type IAgentRuntime,
+    type Memory,
+    type State,
     composeContext,
     generateObjectDeprecated,
     generateText,
@@ -111,7 +111,7 @@ export const getRecentDonations: Action = {
                     valueUsd: makersTotal
                 }] : []);
             console.log("consolidatedDonations", consolidatedDonations);
-            let outputContext = `Take the final result of all the recent donations that you encountered on the giveth platform, sorted by highest USD value and respond to the user in your character, exclude any donations that are less than $5. Use bullet points and markdown formatting, highlighting the project titles in bold and the amounts
+            const outputContext = `Take the final result of all the recent donations that you encountered on the giveth platform, sorted by highest USD value and respond to the user in your character, exclude any donations that are less than $5. Use bullet points and markdown formatting, highlighting the project titles in bold and the amounts
               in regular text. Here are the recent donations to Giveth projects:\n
             ${consolidatedDonations.map((donation) => `- *${donation.project.title}* - $${donation.valueUsd} USD`).join("\n")}
             Don't add any additional text, just the list of donations.`;
