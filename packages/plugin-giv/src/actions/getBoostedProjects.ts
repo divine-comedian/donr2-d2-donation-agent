@@ -1,11 +1,11 @@
 import {
     elizaLogger,
-    Action,
-    ActionExample,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    State,
+    type Action,
+    type ActionExample,
+    type HandlerCallback,
+    type IAgentRuntime,
+    type Memory,
+    type State,
 } from "@elizaos/core";
 import { getProjectsExamples } from "../examples";
 import { createGivethGraphService } from "../services";

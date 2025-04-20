@@ -60,11 +60,12 @@ export interface ProjectByIdResponse {
             title: string;
             slug: string;
             description: string;
+            totalDonations: number;
             verified: boolean;
-            socialMedia: {
+            socialMedia: Array<{
                 link: string;
                 type: string;
-            };
+            }>;
         };
     };
 }

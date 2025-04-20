@@ -4,19 +4,14 @@ import {
     type ProjectByIdResponse,
     type RecentDonationsResponse,
     type KarmaAPIResponse,
-    type Donation,
+    Donation,
     Donations,
     Transaction,
     type ProjectUpdatesResponse
 } from "./types";
 
-import { DonationHandlerAddress } from "./constants";
-import { privateKeyToAccount } from 'viem/accounts'
-import { createWalletClient, createPublicClient, http } from 'viem'
-import DonationHandlerABI from "../abi/DonationHandler.json";
-import IERC20ABI from "../abi/IERC20.json";
-import { celoAlfajores, type Chain } from "viem/chains";
-import { composeContext, type State, ModelClass, type IAgentRuntime, generateObjectDeprecated } from "@elizaos/core";
+import { celoAlfajores, Chain } from "viem/chains";
+import { composeContext, State, ModelClass, IAgentRuntime, generateObjectDeprecated } from "@elizaos/core";
 
 const GIVETH_PROD_URL = "https://mainnet.serve.giveth.io/graphql";
 const DEVOUCH_PROD_URL = "https://optimism.backend.devouch.xyz/graphql";
@@ -182,6 +177,7 @@ export const createGivethGraphService = () => {
         title
         slug
         description
+        totalDonations
         verified
         socialMedia{
             link
@@ -412,140 +408,4 @@ query getRecentDonations {
     
     
     
-};
-export const DonationHandlerService = (privateKey: string) => {
-    const account = privateKeyToAccount(privateKey as `0x${string}`);
-    interface ValidateDonationResponse {
-        success: boolean
-        error?: string
-    }
-    const validateDonation = async (donation: Donation, chain: Chain, donationHandlerAddress: string): Promise<ValidateDonationResponse> => {
-       const validationResponse:ValidateDonationResponse  = {
-        success: true,
-        error: ""
-       }
-       
-        const publicClient = createPublicClient({
-            chain: chain,
-            transport: http()
-        })
-
-        const balanceCheck = await publicClient.readContract({
-            address: donation.tokenAddress as `0x${string}`,
-            abi: IERC20ABI.abi,
-            functionName: "balanceOf",
-            args: [account.address]
-        }) as bigint;
-        if (balanceCheck > donation.amount) {
-            validationResponse.success = true
-        }
-
-        const allowanceCheck = await publicClient.readContract({
-            address: donation.tokenAddress as `0x${string}`,
-            abi: IERC20ABI.abi,
-            functionName: "allowance",
-            args: [account.address, donationHandlerAddress]
-        }) as bigint;
-        if (allowanceCheck < donation.amount) {
-            validationResponse.success = false
-            validationResponse.error = "Insufficient allowance"
-        }
-        
-        return validationResponse
-    }
-    const sendDonation = async (donation: Donation, chain: Chain): Promise<string> => {
-        if (!privateKey) {
-            throw new Error("Private key is required");
-        }
-
-
-        const walletClient = createWalletClient({
-            account,
-            chain: chain,
-            transport: http()
-        });
-        const publicClient = createPublicClient({
-            chain: chain,
-            transport: http()
-        });
-        let donationHash: string;
-        try {
-            // First approve the tokens
-            
-            const { request: allowanceRequest } = await publicClient.simulateContract({
-                address: donation.tokenAddress as `0x${string}`,
-                abi: IERC20ABI.abi,
-                functionName: "approve",
-                args: [DonationHandlerAddress.ALFAJORES.address, donation.amount]
-            });
-                
-                const allowanceHash = await walletClient.writeContract(allowanceRequest);
-                
-                // Wait for allowance transaction to be mined
-                await publicClient.waitForTransactionReceipt({ hash: allowanceHash });
-                if (donation.tokenAddress) {
-                    
-                    const validationResponse = await validateDonation(donation, chain, DonationHandlerAddress.ALFAJORES.address);
-                    console.log("validationResponse", validationResponse)
-            
-                    // if (!validationResponse.success) {
-            //     throw new Error(validationResponse.error);
-            // }
-                
-                // Then execute the donation
-                const { request: donateRequest } = await publicClient.simulateContract({
-                    address: DonationHandlerAddress.ALFAJORES.address as `0x${string}`,
-                    abi: DonationHandlerABI.abi,
-                    functionName: "donateERC20",
-                    args: [donation.tokenAddress, donation.recipient, donation.amount, donation.projectId]
-                });
-                
-                donationHash = await walletClient.writeContract(donateRequest);
-            } else {
-                // Execute ETH donation
-                const { request: donateRequest } = await publicClient.simulateContract({
-                    address: DonationHandlerAddress.ALFAJORES.address as `0x${string}`,
-                    abi: DonationHandlerABI.abi,
-                    functionName: "donateETH",
-                    args: [
-                        donation.recipient,
-                        donation.amount,
-                        donation.projectId // This should be properly encoded as bytes
-                    ],
-                    value: donation.amount
-                });
-                
-                donationHash = await walletClient.writeContract(donateRequest);
-            }
-
-        } catch (error) {
-            if (error instanceof Error) {
-                throw new Error(`Transaction failed: ${error.message}`);
-            }
-            throw new Error('Transaction failed with unknown error');
-        }
-        return donationHash;
-    }
-    return {
-        sendDonation
-    }
-}
-
-export const generateInput = async (
-    runtime: IAgentRuntime,
-    state: State,
-    template: string
-): Promise<any> => {
-    const recentDonationsContext = composeContext({
-        state,
-        template: template,
-    });
-
-    const input = (await generateObjectDeprecated({
-        runtime,
-        context: recentDonationsContext,
-        modelClass: ModelClass.SMALL,
-    })) as any;
-
-    return input;
 };

@@ -1,10 +1,10 @@
-import { ProjectsResponse } from "./types";
+import type { ProjectsResponse } from "./types";
 
 const GIVETH_PROD_URL = "https://mainnet.serve.giveth.io/graphql";
 
 export const createGivethGraphService = () => {
     const getProjects = async (
-        limit: number = 4
+        limit = 4
     ): Promise<ProjectsResponse> => {
         try {
             const query = `{

@@ -1,4 +1,4 @@
-import { Plugin } from "@elizaos/core";
+import type { Plugin } from "@elizaos/core";
 import { getProjectsForReviewAction } from "./actions/getProjectsForReview";
 
 export const givProjectsPlugin: Plugin = {
