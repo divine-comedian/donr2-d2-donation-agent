@@ -1,0 +1,36 @@
+{
+    "name": "@elizaos/plugin-giv",
+    "version": "0.1.8+build.1",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@elizaos/core": "workspace:*",
+        "zod": "3.22.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "tsup": "8.3.5",
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "build": "tsup src/index.ts --format esm --dts",
+        "dev": "tsup src/index.ts --format esm --dts --watch 'src/**/*.ts'",
+        "lint": "eslint --fix  --cache ."
+    },
+    "peerDependencies": {
+        "whatwg-url": "7.1.0"
+    }
+}

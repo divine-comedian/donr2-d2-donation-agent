@@ -363,7 +363,7 @@ export async function loadCharacters(
 
     if (loadedCharacters.length === 0) {
         elizaLogger.info("No characters found, using default character");
-        loadedCharacters.push(defaultCharacter);
+        loadedCharacters.push(donr2d2Character);
     }
 
     return loadedCharacters;
@@ -611,7 +611,7 @@ export async function initializeClients(
         }
     }
 
-    return clients;
+    return clients || {};
 }
 
 export async function createAgent(
@@ -762,7 +762,8 @@ async function startAgent(
         await runtime.initialize();
 
         // start assigned clients
-        runtime.clients = await initializeClients(character, runtime);
+        const clients = await initializeClients(character, runtime);
+        runtime.clients = clients || {}; // Provide default empty object if no clients returned
 
         // add to container
         directClient.registerAgent(runtime);
@@ -833,7 +834,7 @@ const startAgents = async () => {
     let serverPort = Number.parseInt(settings.SERVER_PORT || "3000");
     const args = parseArguments();
     const charactersArg = args.characters || args.character;
-    let characters = [defaultCharacter];
+    let characters = [donr2d2Character];
 
     if ((charactersArg) || hasValidRemoteUrls()) {
         characters = await loadCharacters(charactersArg);

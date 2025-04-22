@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[packages/core/src/relationships.ts:33](https://github.com/elizaOS/eliza/blob/main/packages/core/src/relationships.ts#L33)
+[packages/core/src/relationships.ts:33](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/relationships.ts#L33)

@@ -32,6 +32,12 @@ A list of strings to stop the generateText at.
 
 • **opts.customSystemPrompt?**: `string`
 
+• **opts.verifiableInference?**: `boolean` = `...`
+
+• **opts.verifiableInferenceAdapter?**: [`IVerifiableInferenceAdapter`](../interfaces/IVerifiableInferenceAdapter.md)
+
+• **opts.verifiableInferenceOptions?**: [`VerifiableInferenceOptions`](../interfaces/VerifiableInferenceOptions.md)
+
 ## Returns
 
 `Promise`\<`string`\>

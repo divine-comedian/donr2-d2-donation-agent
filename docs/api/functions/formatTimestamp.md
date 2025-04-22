@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[packages/core/src/messages.ts:94](https://github.com/elizaOS/eliza/blob/main/packages/core/src/messages.ts#L94)
+[packages/core/src/messages.ts:94](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/messages.ts#L94)

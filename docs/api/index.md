@@ -10,6 +10,7 @@
 - [IrysDataType](enumerations/IrysDataType.md)
 - [ServiceType](enumerations/ServiceType.md)
 - [LoggingLevel](enumerations/LoggingLevel.md)
+- [VerifiableInferenceProvider](enumerations/VerifiableInferenceProvider.md)
 - [TokenizerType](enumerations/TokenizerType.md)
 - [TranscriptionProvider](enumerations/TranscriptionProvider.md)
 - [ActionTimelineType](enumerations/ActionTimelineType.md)
