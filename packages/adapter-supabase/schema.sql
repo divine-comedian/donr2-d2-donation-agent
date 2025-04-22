@@ -193,3 +193,9 @@ CREATE INDEX idx_knowledge_shared ON knowledge("isShared");
 CREATE INDEX idx_knowledge_embedding ON knowledge USING ivfflat (embedding vector_cosine_ops);
 
 COMMIT;
+
+CREATE OR REPLACE FUNCTION public.create_room(roomId UUID) RETURNS VOID AS $$
+BEGIN
+    INSERT INTO rooms (id, createdAt) VALUES (roomId, CURRENT_TIMESTAMP);
+END;
+$$ LANGUAGE plpgsql;

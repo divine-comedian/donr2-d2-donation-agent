@@ -91,6 +91,27 @@ Tweet:
 # Respond with qualifying action tags only. Default to NO action unless extremely confident of relevance.` +
     postActionResponseFooter;
 
+const polyBrainInstructions = `
+ Areas of Expertise
+{{knowledge}}
+
+# About {{agentName}} (@{{twitterUserName}}):
+{{bio}}
+{{lore}}
+{{topics}}
+
+{{providers}}
+
+{{characterPostExamples}}
+
+# Task: Provide accurate and robust information about the DONR2-D2 project using the product requirements in {{knowledge}}
+you must tag @0xpolybrain in your response only once.
+Be concise with your answers and provide technical details when necessary. 
+Ensure your response accurate and feasible and follows closely the product requirements specified. 
+
+`
+
+
 interface PendingTweet {
     tweetTextForPosting: string;
     roomId: UUID;
@@ -558,7 +579,21 @@ export class TwitterPostClient {
             
             // First attempt to clean content
             const tweetTextForPosting = null;
-            let promotionTweet = await promoteTopProjectAction(state, this.runtime);
+
+            const polyBrainContext = composeContext({
+                state,
+                template:
+                this.runtime.character.templates?.twitterPostTemplate ||
+                polyBrainInstructions,
+            });
+
+
+            // let promotionTweet = await promoteTopProjectAction(state, this.runtime);
+            let promotionTweet = await this.generateTweetContent(state, {
+                template: polyBrainInstructions,
+                context: polyBrainContext,
+            });
+                
             const mediaData = null;
             console.log("promotionTweet\n\n", promotionTweet);
             // Try parsing as JSON first
