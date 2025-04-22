@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / GenerationOptions
+[@elizaos/core v0.25.8](../index.md) / GenerationOptions
 
 # Interface: GenerationOptions
 
@@ -12,7 +12,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2044](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2044)
+[packages/core/src/generation.ts:2131](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2131)
 
 ***
 
@@ -22,7 +22,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2045](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2045)
+[packages/core/src/generation.ts:2132](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2132)
 
 ***
 
@@ -32,7 +32,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2046](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2046)
+[packages/core/src/generation.ts:2133](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2133)
 
 ***
 
@@ -42,7 +42,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2047](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2047)
+[packages/core/src/generation.ts:2134](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2134)
 
 ***
 
@@ -52,7 +52,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2048](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2048)
+[packages/core/src/generation.ts:2135](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2135)
 
 ***
 
@@ -62,7 +62,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2049](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2049)
+[packages/core/src/generation.ts:2136](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2136)
 
 ***
 
@@ -72,7 +72,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2050](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2050)
+[packages/core/src/generation.ts:2137](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2137)
 
 ***
 
@@ -82,7 +82,7 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2051](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2051)
+[packages/core/src/generation.ts:2138](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2138)
 
 ***
 
@@ -92,34 +92,4 @@ Configuration options for generating objects with a model.
 
 #### Defined in
 
-[packages/core/src/generation.ts:2052](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2052)
-
-***
-
-### verifiableInference?
-
-> `optional` **verifiableInference**: `boolean`
-
-#### Defined in
-
-[packages/core/src/generation.ts:2053](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2053)
-
-***
-
-### verifiableInferenceAdapter?
-
-> `optional` **verifiableInferenceAdapter**: [`IVerifiableInferenceAdapter`](IVerifiableInferenceAdapter.md)
-
-#### Defined in
-
-[packages/core/src/generation.ts:2054](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2054)
-
-***
-
-### verifiableInferenceOptions?
-
-> `optional` **verifiableInferenceOptions**: [`VerifiableInferenceOptions`](VerifiableInferenceOptions.md)
-
-#### Defined in
-
-[packages/core/src/generation.ts:2055](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2055)
+[packages/core/src/generation.ts:2139](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2139)

@@ -1,8 +1,10 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / generateTweetActions
+[@elizaos/core v0.25.8](../index.md) / generateTweetActions
 
 # Function: generateTweetActions()
 
 > **generateTweetActions**(`__namedParameters`): `Promise`\<[`ActionResponse`](../interfaces/ActionResponse.md) \| `null`\>
+
+doesn't belong here
 
 ## Parameters
 
@@ -20,4 +22,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:2579](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2579)
+[packages/core/src/generation.ts:2757](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2757)

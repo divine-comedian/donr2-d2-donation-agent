@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / generateObject
+[@elizaos/core v0.25.8](../index.md) / generateObject
 
 # Function: generateObject()
 
@@ -24,4 +24,4 @@ Configuration options for generating objects.
 
 ## Defined in
 
-[packages/core/src/generation.ts:2078](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L2078)
+[packages/core/src/generation.ts:2165](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L2165)

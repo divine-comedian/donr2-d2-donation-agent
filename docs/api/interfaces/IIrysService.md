@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / IIrysService
+[@elizaos/core v0.25.8](../index.md) / IIrysService
 
 # Interface: IIrysService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1262](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1262)
+[packages/core/src/types.ts:1279](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1279)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1267](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1267)
+[packages/core/src/types.ts:1284](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1284)
 
 ***
 
@@ -70,7 +70,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1474](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1474)
+[packages/core/src/types.ts:1489](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1489)
 
 ***
 
@@ -104,7 +104,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1479](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1479)
+[packages/core/src/types.ts:1494](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1494)
 
 ***
 
@@ -128,4 +128,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1490](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1490)
+[packages/core/src/types.ts:1505](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1505)

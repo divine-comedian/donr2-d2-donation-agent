@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / TokenizerType
+[@elizaos/core v0.25.8](../index.md) / TokenizerType
 
 # Enumeration: TokenizerType
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1637](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1637)
+[packages/core/src/types.ts:1590](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1590)
 
 ***
 
@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1638](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1638)
+[packages/core/src/types.ts:1591](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1591)

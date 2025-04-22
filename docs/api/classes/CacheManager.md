@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / CacheManager
+[@elizaos/core v0.25.8](../index.md) / CacheManager
 
 # Class: CacheManager\<CacheAdapter\>
 

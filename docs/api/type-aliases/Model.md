@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / Model
+[@elizaos/core v0.25.8](../index.md) / Model
 
 # Type Alias: Model
 
@@ -42,4 +42,4 @@ Model names by size class
 
 ## Defined in
 
-[packages/core/src/types.ts:186](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L186)
+[packages/core/src/types.ts:186](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L186)

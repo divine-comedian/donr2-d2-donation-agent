@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / IVideoService
+[@elizaos/core v0.25.8](../index.md) / IVideoService
 
 # Interface: IVideoService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1262](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1262)
+[packages/core/src/types.ts:1279](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1279)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1267](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1267)
+[packages/core/src/types.ts:1284](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1284)
 
 ***
 
@@ -66,7 +66,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1379](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1379)
+[packages/core/src/types.ts:1394](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1394)
 
 ***
 
@@ -84,7 +84,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1380](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1380)
+[packages/core/src/types.ts:1395](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1395)
 
 ***
 
@@ -102,7 +102,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1381](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1381)
+[packages/core/src/types.ts:1396](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1396)
 
 ***
 
@@ -122,4 +122,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1382](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1382)
+[packages/core/src/types.ts:1397](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1397)

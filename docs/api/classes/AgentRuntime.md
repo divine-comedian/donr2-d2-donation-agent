@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / AgentRuntime
+[@elizaos/core v0.1.7](../index.md) / AgentRuntime
 
 # Class: AgentRuntime
 
@@ -60,7 +60,7 @@ Optional custom services.
 
 • **opts.managers?**: [`IMemoryManager`](../interfaces/IMemoryManager.md)[]
 
-• **opts.databaseAdapter**: [`IDatabaseAdapter`](../interfaces/IDatabaseAdapter.md)
+• **opts.databaseAdapter?**: [`IDatabaseAdapter`](../interfaces/IDatabaseAdapter.md)
 
 The database adapter used for interacting with the database.
 
@@ -70,7 +70,7 @@ Custom fetch function to use for making requests.
 
 • **opts.speechModelPath?**: `string`
 
-• **opts.cacheManager**: [`ICacheManager`](../interfaces/ICacheManager.md)
+• **opts.cacheManager?**: [`ICacheManager`](../interfaces/ICacheManager.md)
 
 • **opts.logging?**: `boolean`
 
@@ -82,7 +82,7 @@ Custom fetch function to use for making requests.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:239](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L239)
+[packages/core/src/runtime.ts:215](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L215)
 
 ## Properties
 
@@ -98,7 +98,7 @@ The ID of the agent
 
 #### Defined in
 
-[packages/core/src/runtime.ts:82](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L82)
+[packages/core/src/runtime.ts:63](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L63)
 
 ***
 
@@ -114,7 +114,7 @@ The base URL of the server where the agent's requests are processed.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:86](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L86)
+[packages/core/src/runtime.ts:67](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L67)
 
 ***
 
@@ -130,7 +130,7 @@ The database adapter used for interacting with the database.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:91](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L91)
+[packages/core/src/runtime.ts:72](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L72)
 
 ***
 
@@ -146,7 +146,7 @@ Authentication token used for securing requests.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:96](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L96)
+[packages/core/src/runtime.ts:77](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L77)
 
 ***
 
@@ -162,7 +162,7 @@ Custom actions that the agent can perform.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:101](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L101)
+[packages/core/src/runtime.ts:82](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L82)
 
 ***
 
@@ -178,7 +178,7 @@ Evaluators used to assess and guide the agent's responses.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:106](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L106)
+[packages/core/src/runtime.ts:87](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L87)
 
 ***
 
@@ -194,9 +194,9 @@ Context providers used to provide context for message generation.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:111](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L111)
+[packages/core/src/runtime.ts:92](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L92)
 
-***
+---
 
 ### plugins
 
@@ -208,7 +208,7 @@ Context providers used to provide context for message generation.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:113](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L113)
+[packages/core/src/runtime.ts:94](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L94)
 
 ***
 
@@ -224,7 +224,7 @@ The model to use for generateText.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:118](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L118)
+[packages/core/src/runtime.ts:99](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L99)
 
 ***
 
@@ -240,7 +240,7 @@ The model to use for generateImage.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:123](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L123)
+[packages/core/src/runtime.ts:104](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L104)
 
 ***
 
@@ -256,7 +256,7 @@ The model to use for describing images.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:128](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L128)
+[packages/core/src/runtime.ts:110](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L110)
 
 ***
 
@@ -295,7 +295,7 @@ Some environments may not have access to the global fetch function and need a cu
 
 #### Defined in
 
-[packages/core/src/runtime.ts:134](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L134)
+[packages/core/src/runtime.ts:116](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L116)
 
 ***
 
@@ -311,7 +311,7 @@ The character to use for the agent
 
 #### Defined in
 
-[packages/core/src/runtime.ts:139](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L139)
+[packages/core/src/runtime.ts:121](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L121)
 
 ***
 
@@ -327,7 +327,7 @@ Store messages that are sent and received by the agent.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:144](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L144)
+[packages/core/src/runtime.ts:126](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L126)
 
 ***
 
@@ -343,7 +343,7 @@ Store and recall descriptions of users based on conversations.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:149](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L149)
+[packages/core/src/runtime.ts:131](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L131)
 
 ***
 
@@ -359,7 +359,7 @@ Manage the creation and recall of static information (documents, historical game
 
 #### Defined in
 
-[packages/core/src/runtime.ts:154](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L154)
+[packages/core/src/runtime.ts:136](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L136)
 
 ***
 
@@ -375,7 +375,7 @@ Hold large documents that can be referenced
 
 #### Defined in
 
-[packages/core/src/runtime.ts:159](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L159)
+[packages/core/src/runtime.ts:141](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L141)
 
 ***
 
@@ -391,23 +391,9 @@ Searchable document fragments
 
 #### Defined in
 
-[packages/core/src/runtime.ts:164](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L164)
+[packages/core/src/runtime.ts:146](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L146)
 
-***
-
-### ragKnowledgeManager
-
-> **ragKnowledgeManager**: [`IRAGKnowledgeManager`](../interfaces/IRAGKnowledgeManager.md)
-
-#### Implementation of
-
-[`IAgentRuntime`](../interfaces/IAgentRuntime.md).[`ragKnowledgeManager`](../interfaces/IAgentRuntime.md#ragKnowledgeManager)
-
-#### Defined in
-
-[packages/core/src/runtime.ts:166](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L166)
-
-***
+---
 
 ### services
 
@@ -419,7 +405,7 @@ Searchable document fragments
 
 #### Defined in
 
-[packages/core/src/runtime.ts:170](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L170)
+[packages/core/src/runtime.ts:148](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L148)
 
 ***
 
@@ -429,7 +415,7 @@ Searchable document fragments
 
 #### Defined in
 
-[packages/core/src/runtime.ts:171](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L171)
+[packages/core/src/runtime.ts:149](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L149)
 
 ***
 
@@ -443,16 +429,13 @@ Searchable document fragments
 
 #### Defined in
 
-[packages/core/src/runtime.ts:172](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L172)
+[packages/core/src/runtime.ts:150](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L150)
 
 ***
 
 ### clients
 
-> **clients**: `Record`\<`string`, `any`\>
-
-any could be EventEmitter
-but I think the real solution is forthcoming as a base client interface
+> **clients**: [`ClientInstance`](../type-aliases/ClientInstance.md)[] = `[]`
 
 #### Implementation of
 
@@ -460,27 +443,15 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:173](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L173)
-
-***
-
-### verifiableInferenceAdapter?
-
-> `optional` **verifiableInferenceAdapter**: [`IVerifiableInferenceAdapter`](../interfaces/IVerifiableInferenceAdapter.md)
-
-#### Implementation of
-
-[`IAgentRuntime`](../interfaces/IAgentRuntime.md).[`verifiableInferenceAdapter`](../interfaces/IAgentRuntime.md#verifiableInferenceAdapter)
-
-#### Defined in
-
-[packages/core/src/runtime.ts:175](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L175)
+[packages/core/src/runtime.ts:151](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L151)
 
 ## Methods
 
 ### registerMemoryManager()
 
 > **registerMemoryManager**(`manager`): `void`
+
+verifiableInferenceAdapter?: IVerifiableInferenceAdapter;
 
 #### Parameters
 
@@ -496,7 +467,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:177](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L177)
+[packages/core/src/runtime.ts:153](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L153)
 
 ***
 
@@ -518,7 +489,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:192](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L192)
+[packages/core/src/runtime.ts:168](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L168)
 
 ***
 
@@ -544,7 +515,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:196](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L196)
+[packages/core/src/runtime.ts:172](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L172)
 
 ***
 
@@ -566,13 +537,15 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:205](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L205)
+[packages/core/src/runtime.ts:181](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L181)
 
 ***
 
 ### initialize()
 
 > **initialize**(): `Promise`\<`void`\>
+
+verifiableInferenceAdapter?: IVerifiableInferenceAdapter | null;
 
 #### Returns
 
@@ -584,7 +557,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:446](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L446)
+[packages/core/src/runtime.ts:395](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L395)
 
 ***
 
@@ -598,7 +571,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:565](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L565)
+[packages/core/src/runtime.ts:428](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L428)
 
 ***
 
@@ -620,7 +593,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/runtime.ts:931](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L931)
+[packages/core/src/runtime.ts:478](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L478)
 
 ***
 
@@ -642,7 +615,7 @@ The number of recent messages to be kept in memory.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:953](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L953)
+[packages/core/src/runtime.ts:500](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L500)
 
 ***
 
@@ -668,7 +641,7 @@ The action to register.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:961](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L961)
+[packages/core/src/runtime.ts:508](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L508)
 
 ***
 
@@ -690,7 +663,7 @@ The evaluator to register.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:970](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L970)
+[packages/core/src/runtime.ts:517](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L517)
 
 ***
 
@@ -712,9 +685,9 @@ The context provider to register.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:978](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L978)
+[packages/core/src/runtime.ts:525](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L525)
 
-***
+---
 
 ### processActions()
 
@@ -744,7 +717,7 @@ The message to process.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:987](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L987)
+[packages/core/src/runtime.ts:534](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L534)
 
 ***
 
@@ -784,7 +757,7 @@ The results of the evaluation.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1071](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1071)
+[packages/core/src/runtime.ts:618](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L618)
 
 ***
 
@@ -816,7 +789,7 @@ An error if the participant cannot be added.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1141](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1141)
+[packages/core/src/runtime.ts:685](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L685)
 
 ***
 
@@ -852,7 +825,7 @@ The user name to ensure the existence of.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1157](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1157)
+[packages/core/src/runtime.ts:701](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L701)
 
 ***
 
@@ -876,7 +849,7 @@ The user name to ensure the existence of.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1177](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1177)
+[packages/core/src/runtime.ts:721](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L721)
 
 ***
 
@@ -906,7 +879,7 @@ The user name to ensure the existence of.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1194](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1194)
+[packages/core/src/runtime.ts:738](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L738)
 
 ***
 
@@ -937,7 +910,7 @@ An error if the room cannot be created.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1230](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1230)
+[packages/core/src/runtime.ts:774](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L774)
 
 ***
 
@@ -967,7 +940,7 @@ The state of the agent.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1243](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1243)
+[packages/core/src/runtime.ts:787](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L787)
 
 ***
 
@@ -989,36 +962,4 @@ The state of the agent.
 
 #### Defined in
 
-[packages/core/src/runtime.ts:1700](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1700)
-
-***
-
-### getVerifiableInferenceAdapter()
-
-> **getVerifiableInferenceAdapter**(): [`IVerifiableInferenceAdapter`](../interfaces/IVerifiableInferenceAdapter.md)
-
-#### Returns
-
-[`IVerifiableInferenceAdapter`](../interfaces/IVerifiableInferenceAdapter.md)
-
-#### Defined in
-
-[packages/core/src/runtime.ts:1765](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1765)
-
-***
-
-### setVerifiableInferenceAdapter()
-
-> **setVerifiableInferenceAdapter**(`adapter`): `void`
-
-#### Parameters
-
-• **adapter**: [`IVerifiableInferenceAdapter`](../interfaces/IVerifiableInferenceAdapter.md)
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[packages/core/src/runtime.ts:1769](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/runtime.ts#L1769)
+[packages/core/src/runtime.ts:1233](https://github.com/elizaOS/eliza/blob/main/packages/core/src/runtime.ts#L1233)

@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / TranscriptionProvider
+[@elizaos/core v0.25.8](../index.md) / TranscriptionProvider
 
 # Enumeration: TranscriptionProvider
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1642](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1642)
+[packages/core/src/types.ts:1595](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1595)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1643](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1643)
+[packages/core/src/types.ts:1596](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1596)
 
 ***
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1644](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1644)
+[packages/core/src/types.ts:1597](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1597)

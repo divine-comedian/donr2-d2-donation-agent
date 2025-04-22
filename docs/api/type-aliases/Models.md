@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / Models
+[@elizaos/core v0.25.8](../index.md) / Models
 
 # Type Alias: Models
 
@@ -136,6 +136,14 @@ Model configurations by provider
 
 > **atoma**: [`Model`](Model.md)
 
+### secret\_ai
+
+> **secret\_ai**: [`Model`](Model.md)
+
+### nearai
+
+> **nearai**: [`Model`](Model.md)
+
 ## Defined in
 
-[packages/core/src/types.ts:203](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L203)
+[packages/core/src/types.ts:203](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L203)

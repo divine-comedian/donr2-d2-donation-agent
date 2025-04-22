@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / DirectoryItem
+[@elizaos/core v0.25.8](../index.md) / DirectoryItem
 
 # Interface: DirectoryItem
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1661](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1661)
+[packages/core/src/types.ts:1614](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1614)
 
 ***
 
@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1662](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1662)
+[packages/core/src/types.ts:1615](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1615)

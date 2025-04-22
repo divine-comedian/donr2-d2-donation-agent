@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / composeRandomUser
+[@elizaos/core v0.25.8](../index.md) / composeRandomUser
 
 # Function: composeRandomUser()
 
@@ -36,4 +36,4 @@ const result = composeRandomUser({ template, length });
 
 ## Defined in
 
-[packages/core/src/context.ts:105](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/context.ts#L105)
+[packages/core/src/context.ts:105](https://github.com/elizaOS/eliza/blob/main/packages/core/src/context.ts#L105)

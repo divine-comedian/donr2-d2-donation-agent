@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / generateMessageResponse
+[@elizaos/core v0.25.8](../index.md) / generateMessageResponse
 
 # Function: generateMessageResponse()
 
@@ -28,4 +28,4 @@ The completed message.
 
 ## Defined in
 
-[packages/core/src/generation.ts:1585](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L1585)
+[packages/core/src/generation.ts:1661](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1661)

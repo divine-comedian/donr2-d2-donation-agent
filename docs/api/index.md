@@ -1,11 +1,10 @@
-# @elizaos/core v0.25.6-alpha.1
+# @elizaos/core v0.25.8
 
 ## Enumerations
 
 - [GoalStatus](enumerations/GoalStatus.md)
 - [ModelClass](enumerations/ModelClass.md)
 - [ModelProviderName](enumerations/ModelProviderName.md)
-- [Clients](enumerations/Clients.md)
 - [CacheStore](enumerations/CacheStore.md)
 - [IrysMessageType](enumerations/IrysMessageType.md)
 - [IrysDataType](enumerations/IrysDataType.md)
@@ -77,9 +76,6 @@
 - [RAGKnowledgeItem](interfaces/RAGKnowledgeItem.md)
 - [ActionResponse](interfaces/ActionResponse.md)
 - [ISlackService](interfaces/ISlackService.md)
-- [VerifiableInferenceOptions](interfaces/VerifiableInferenceOptions.md)
-- [VerifiableInferenceResult](interfaces/VerifiableInferenceResult.md)
-- [IVerifiableInferenceAdapter](interfaces/IVerifiableInferenceAdapter.md)
 - [DirectoryItem](interfaces/DirectoryItem.md)
 - [ChunkRow](interfaces/ChunkRow.md)
 
@@ -99,7 +95,9 @@
 - [HandlerCallback](type-aliases/HandlerCallback.md)
 - [Validator](type-aliases/Validator.md)
 - [Media](type-aliases/Media.md)
+- [ClientInstance](type-aliases/ClientInstance.md)
 - [Client](type-aliases/Client.md)
+- [Adapter](type-aliases/Adapter.md)
 - [Plugin](type-aliases/Plugin.md)
 - [TelemetrySettings](type-aliases/TelemetrySettings.md)
 - [TemplateType](type-aliases/TemplateType.md)
@@ -109,7 +107,6 @@
 
 ## Variables
 
-- [defaultCharacter](variables/defaultCharacter.md)
 - [EmbeddingProvider](variables/EmbeddingProvider.md)
 - [envSchema](variables/envSchema.md)
 - [CharacterSchema](variables/CharacterSchema.md)
@@ -147,6 +144,7 @@
 - [generateText](functions/generateText.md)
 - [generateShouldRespond](functions/generateShouldRespond.md)
 - [splitChunks](functions/splitChunks.md)
+- [splitText](functions/splitText.md)
 - [generateTrueOrFalse](functions/generateTrueOrFalse.md)
 - [generateTextArray](functions/generateTextArray.md)
 - [generateObjectDeprecated](functions/generateObjectDeprecated.md)

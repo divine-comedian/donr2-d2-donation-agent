@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / ActionResponse
+[@elizaos/core v0.25.8](../index.md) / ActionResponse
 
 # Interface: ActionResponse
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1563](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1563)
+[packages/core/src/types.ts:1579](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1579)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1564](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1564)
+[packages/core/src/types.ts:1580](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1580)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1565](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1565)
+[packages/core/src/types.ts:1581](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1581)
 
 ***
 
@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1566](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1566)
+[packages/core/src/types.ts:1582](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1582)

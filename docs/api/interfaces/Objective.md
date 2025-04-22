@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / Objective
+[@elizaos/core v0.25.8](../index.md) / Objective
 
 # Interface: Objective
 

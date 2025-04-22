@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / ITeeLogService
+[@elizaos/core v0.25.8](../index.md) / ITeeLogService
 
 # Interface: ITeeLogService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1262](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1262)
+[packages/core/src/types.ts:1279](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1279)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1267](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1267)
+[packages/core/src/types.ts:1284](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1284)
 
 ***
 
@@ -62,7 +62,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1499](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1499)
+[packages/core/src/types.ts:1514](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1514)
 
 ***
 
@@ -88,4 +88,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1500](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1500)
+[packages/core/src/types.ts:1515](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1515)

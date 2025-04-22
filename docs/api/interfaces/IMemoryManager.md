@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / IMemoryManager
+[@elizaos/core v0.25.8](../index.md) / IMemoryManager
 
 # Interface: IMemoryManager
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1159](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1159)
+[packages/core/src/types.ts:1176](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1176)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1160](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1160)
+[packages/core/src/types.ts:1177](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1177)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1161](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1161)
+[packages/core/src/types.ts:1178](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1178)
 
 ## Methods
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1163](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1163)
+[packages/core/src/types.ts:1180](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1180)
 
 ***
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1165](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1165)
+[packages/core/src/types.ts:1182](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1182)
 
 ***
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1173](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1173)
+[packages/core/src/types.ts:1190](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1190)
 
 ***
 
@@ -112,7 +112,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1177](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1177)
+[packages/core/src/types.ts:1194](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1194)
 
 ***
 
@@ -134,7 +134,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1178](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1178)
+[packages/core/src/types.ts:1195](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1195)
 
 ***
 
@@ -162,7 +162,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1182](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1182)
+[packages/core/src/types.ts:1199](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1199)
 
 ***
 
@@ -182,7 +182,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1192](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1192)
+[packages/core/src/types.ts:1209](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1209)
 
 ***
 
@@ -200,7 +200,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1194](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1194)
+[packages/core/src/types.ts:1211](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1211)
 
 ***
 
@@ -218,7 +218,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1196](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1196)
+[packages/core/src/types.ts:1213](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1213)
 
 ***
 
@@ -238,4 +238,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1198](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1198)
+[packages/core/src/types.ts:1215](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1215)

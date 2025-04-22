@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / ActionTimelineType
+[@elizaos/core v0.25.8](../index.md) / ActionTimelineType
 
 # Enumeration: ActionTimelineType
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1648](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1648)
+[packages/core/src/types.ts:1601](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1601)
 
 ***
 
@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1649](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1649)
+[packages/core/src/types.ts:1602](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1602)

@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / generateShouldRespond
+[@elizaos/core v0.25.8](../index.md) / generateShouldRespond
 
 # Function: generateShouldRespond()
 
@@ -28,4 +28,4 @@ Promise resolving to "RESPOND", "IGNORE", "STOP" or null
 
 ## Defined in
 
-[packages/core/src/generation.ts:1321](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/generation.ts#L1321)
+[packages/core/src/generation.ts:1388](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1388)

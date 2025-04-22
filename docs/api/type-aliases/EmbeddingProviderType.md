@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / EmbeddingProviderType
+[@elizaos/core v0.25.8](../index.md) / EmbeddingProviderType
 
 # Type Alias: EmbeddingProviderType
 
@@ -6,4 +6,4 @@
 
 ## Defined in
 
-[packages/core/src/embedding.ts:25](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/embedding.ts#L25)
+[packages/core/src/embedding.ts:25](https://github.com/elizaOS/eliza/blob/main/packages/core/src/embedding.ts#L25)

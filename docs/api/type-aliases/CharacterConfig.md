@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / CharacterConfig
+[@elizaos/core v0.25.8](../index.md) / CharacterConfig
 
 # Type Alias: CharacterConfig
 
@@ -8,4 +8,4 @@ Type inference
 
 ## Defined in
 
-[packages/core/src/environment.ts:158](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/environment.ts#L158)
+[packages/core/src/environment.ts:157](https://github.com/elizaOS/eliza/blob/main/packages/core/src/environment.ts#L157)

@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / Validator
+[@elizaos/core v0.25.8](../index.md) / Validator
 
 # Type Alias: Validator()
 
@@ -20,4 +20,4 @@ Validator function type for actions/evaluators
 
 ## Defined in
 
-[packages/core/src/types.ts:429](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L429)
+[packages/core/src/types.ts:433](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L433)

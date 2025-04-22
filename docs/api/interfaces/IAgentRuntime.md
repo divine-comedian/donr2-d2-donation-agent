@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / IAgentRuntime
+[@elizaos/core v0.25.8](../index.md) / IAgentRuntime
 
 # Interface: IAgentRuntime
 
@@ -12,7 +12,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1272](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1272)
+[packages/core/src/types.ts:1289](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1289)
 
 ***
 
@@ -22,7 +22,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1273](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1273)
+[packages/core/src/types.ts:1290](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1290)
 
 ***
 
@@ -32,7 +32,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1274](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1274)
+[packages/core/src/types.ts:1291](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1291)
 
 ***
 
@@ -42,7 +42,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1275](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1275)
+[packages/core/src/types.ts:1292](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1292)
 
 ***
 
@@ -52,7 +52,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1276](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1276)
+[packages/core/src/types.ts:1293](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1293)
 
 ***
 
@@ -62,7 +62,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1277](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1277)
+[packages/core/src/types.ts:1294](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1294)
 
 ***
 
@@ -72,7 +72,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1278](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1278)
+[packages/core/src/types.ts:1295](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1295)
 
 ***
 
@@ -82,7 +82,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1279](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1279)
+[packages/core/src/types.ts:1296](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1296)
 
 ***
 
@@ -92,7 +92,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1280](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1280)
+[packages/core/src/types.ts:1297](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1297)
 
 ***
 
@@ -102,7 +102,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1281](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1281)
+[packages/core/src/types.ts:1298](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1298)
 
 ***
 
@@ -112,7 +112,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1282](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1282)
+[packages/core/src/types.ts:1299](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1299)
 
 ***
 
@@ -122,7 +122,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1283](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1283)
+[packages/core/src/types.ts:1300](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1300)
 
 ***
 
@@ -154,7 +154,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1285](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1285)
+[packages/core/src/types.ts:1302](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1302)
 
 ***
 
@@ -164,7 +164,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1287](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1287)
+[packages/core/src/types.ts:1304](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1304)
 
 ***
 
@@ -174,7 +174,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1288](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1288)
+[packages/core/src/types.ts:1305](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1305)
 
 ***
 
@@ -184,7 +184,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1289](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1289)
+[packages/core/src/types.ts:1306](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1306)
 
 ***
 
@@ -194,7 +194,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1290](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1290)
+[packages/core/src/types.ts:1307](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1307)
 
 ***
 
@@ -204,7 +204,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1291](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1291)
+[packages/core/src/types.ts:1308](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1308)
 
 ***
 
@@ -214,7 +214,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1292](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1292)
+[packages/core/src/types.ts:1309](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1309)
 
 ***
 
@@ -224,7 +224,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1294](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1294)
+[packages/core/src/types.ts:1311](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1311)
 
 ***
 
@@ -234,30 +234,17 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1296](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1296)
+[packages/core/src/types.ts:1313](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1313)
 
 ***
 
 ### clients
 
-> **clients**: `Record`\<`string`, `any`\>
-
-any could be EventEmitter
-but I think the real solution is forthcoming as a base client interface
+> **clients**: [`ClientInstance`](../type-aliases/ClientInstance.md)[]
 
 #### Defined in
 
-[packages/core/src/types.ts:1299](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1299)
-
-***
-
-### verifiableInferenceAdapter?
-
-> `optional` **verifiableInferenceAdapter**: [`IVerifiableInferenceAdapter`](IVerifiableInferenceAdapter.md)
-
-#### Defined in
-
-[packages/core/src/types.ts:1301](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1301)
+[packages/core/src/types.ts:1314](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1314)
 
 ## Methods
 
@@ -265,13 +252,15 @@ but I think the real solution is forthcoming as a base client interface
 
 > **initialize**(): `Promise`\<`void`\>
 
+verifiableInferenceAdapter?: IVerifiableInferenceAdapter | null;
+
 #### Returns
 
 `Promise`\<`void`\>
 
 #### Defined in
 
-[packages/core/src/types.ts:1303](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1303)
+[packages/core/src/types.ts:1318](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1318)
 
 ***
 
@@ -289,7 +278,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/types.ts:1305](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1305)
+[packages/core/src/types.ts:1320](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1320)
 
 ***
 
@@ -307,7 +296,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/types.ts:1307](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1307)
+[packages/core/src/types.ts:1322](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1322)
 
 ***
 
@@ -329,7 +318,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/types.ts:1309](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1309)
+[packages/core/src/types.ts:1324](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1324)
 
 ***
 
@@ -347,7 +336,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/types.ts:1311](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1311)
+[packages/core/src/types.ts:1326](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1326)
 
 ***
 
@@ -365,7 +354,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Defined in
 
-[packages/core/src/types.ts:1313](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1313)
+[packages/core/src/types.ts:1328](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1328)
 
 ***
 
@@ -381,7 +370,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1316](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1316)
+[packages/core/src/types.ts:1331](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1331)
 
 ***
 
@@ -405,7 +394,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1318](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1318)
+[packages/core/src/types.ts:1333](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1333)
 
 ***
 
@@ -429,7 +418,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1325](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1325)
+[packages/core/src/types.ts:1340](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1340)
 
 ***
 
@@ -449,7 +438,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1332](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1332)
+[packages/core/src/types.ts:1347](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1347)
 
 ***
 
@@ -473,7 +462,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1334](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1334)
+[packages/core/src/types.ts:1349](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1349)
 
 ***
 
@@ -491,7 +480,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1341](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1341)
+[packages/core/src/types.ts:1356](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1356)
 
 ***
 
@@ -517,7 +506,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1343](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1343)
+[packages/core/src/types.ts:1358](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1358)
 
 ***
 
@@ -537,7 +526,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1351](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1351)
+[packages/core/src/types.ts:1366](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1366)
 
 ***
 
@@ -555,7 +544,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1353](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1353)
+[packages/core/src/types.ts:1368](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1368)
 
 ***
 
@@ -575,7 +564,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1355](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1355)
+[packages/core/src/types.ts:1370](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1370)
 
 ***
 
@@ -593,4 +582,4 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1360](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1360)
+[packages/core/src/types.ts:1375](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1375)

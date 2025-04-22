@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / CharacterSchema
+[@elizaos/core v0.25.8](../index.md) / CharacterSchema
 
 # Variable: CharacterSchema
 
@@ -60,10 +60,6 @@ Main Character schema
 
 > **knowledge**: `ZodOptional`\<`ZodArray`\<`ZodUnion`\<[`ZodString`, `ZodObject`\<`object`, `"strip"`, `ZodTypeAny`, `object`, `object`\>, `ZodObject`\<`object`, `"strip"`, `ZodTypeAny`, `object`, `object`\>]\>, `"many"`\>\>
 
-### clients
-
-> **clients**: `ZodArray`\<`ZodNativeEnum`\<*typeof* [`Clients`](../enumerations/Clients.md)\>, `"many"`\>
-
 ### plugins
 
 > **plugins**: `ZodUnion`\<[`ZodArray`\<`ZodString`, `"many"`\>, `ZodArray`\<`ZodObject`\<`object`, `"strip"`, `ZodTypeAny`, `object`, `object`\>, `"many"`\>]\>
@@ -108,4 +104,4 @@ Main Character schema
 
 ## Defined in
 
-[packages/core/src/environment.ts:67](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/environment.ts#L67)
+[packages/core/src/environment.ts:67](https://github.com/elizaOS/eliza/blob/main/packages/core/src/environment.ts#L67)

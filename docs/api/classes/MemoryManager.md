@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / MemoryManager
+[@elizaos/core v0.25.8](../index.md) / MemoryManager
 
 # Class: MemoryManager
 
@@ -296,7 +296,7 @@ A Promise that resolves when the operation completes.
 
 #### Defined in
 
-[packages/core/src/memory.ts:201](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/memory.ts#L201)
+[packages/core/src/memory.ts:201](https://github.com/elizaOS/eliza/blob/main/packages/core/src/memory.ts#L201)
 
 ***
 
@@ -324,7 +324,7 @@ A Promise that resolves when the operation completes.
 
 #### Defined in
 
-[packages/core/src/memory.ts:212](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/memory.ts#L212)
+[packages/core/src/memory.ts:212](https://github.com/elizaOS/eliza/blob/main/packages/core/src/memory.ts#L212)
 
 ***
 
@@ -352,7 +352,7 @@ A Promise that resolves when the operation completes.
 
 #### Defined in
 
-[packages/core/src/memory.ts:224](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/memory.ts#L224)
+[packages/core/src/memory.ts:224](https://github.com/elizaOS/eliza/blob/main/packages/core/src/memory.ts#L224)
 
 ***
 
@@ -384,4 +384,4 @@ A Promise resolving to the count of memories.
 
 #### Defined in
 
-[packages/core/src/memory.ts:237](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/memory.ts#L237)
+[packages/core/src/memory.ts:237](https://github.com/elizaOS/eliza/blob/main/packages/core/src/memory.ts#L237)

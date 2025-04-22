@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / ITextGenerationService
+[@elizaos/core v0.25.8](../index.md) / ITextGenerationService
 
 # Interface: ITextGenerationService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1262](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1262)
+[packages/core/src/types.ts:1279](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1279)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1267](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1267)
+[packages/core/src/types.ts:1284](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1284)
 
 ***
 
@@ -62,7 +62,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1386](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1386)
+[packages/core/src/types.ts:1401](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1401)
 
 ***
 
@@ -90,7 +90,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1387](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1387)
+[packages/core/src/types.ts:1402](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1402)
 
 ***
 
@@ -118,7 +118,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1395](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1395)
+[packages/core/src/types.ts:1410](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1410)
 
 ***
 
@@ -136,4 +136,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1403](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1403)
+[packages/core/src/types.ts:1418](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1418)

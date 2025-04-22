@@ -1,4 +1,4 @@
-[@elizaos/core v0.25.6-alpha.1](../index.md) / IBrowserService
+[@elizaos/core v0.25.8](../index.md) / IBrowserService
 
 # Interface: IBrowserService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1262](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1262)
+[packages/core/src/types.ts:1279](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1279)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1267](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1267)
+[packages/core/src/types.ts:1284](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1284)
 
 ***
 
@@ -62,7 +62,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1407](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1407)
+[packages/core/src/types.ts:1422](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1422)
 
 ***
 
@@ -94,4 +94,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1408](https://github.com/divine-comedian/eliza/blob/main/packages/core/src/types.ts#L1408)
+[packages/core/src/types.ts:1423](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1423)
