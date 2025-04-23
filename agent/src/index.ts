@@ -20,6 +20,7 @@ import {
     validateCharacterConfig,
 } from "@elizaos/core";
 import { defaultCharacter } from "./defaultCharacter.ts";
+import { donr2d2Character } from "./donr2d2Character.ts";
 
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
 import JSON5 from 'json5';
@@ -611,7 +612,7 @@ export async function initializeClients(
         }
     }
 
-    return clients || {};
+    return clients;
 }
 
 export async function createAgent(
@@ -762,8 +763,7 @@ async function startAgent(
         await runtime.initialize();
 
         // start assigned clients
-        const clients = await initializeClients(character, runtime);
-        runtime.clients = clients || {}; // Provide default empty object if no clients returned
+        runtime.clients = await initializeClients(character, runtime);
 
         // add to container
         directClient.registerAgent(runtime);

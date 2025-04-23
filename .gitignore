@@ -8,6 +8,8 @@ old.env
 .env.local
 .env_main
 
+old-client-twitter/*
+
 concatenated-output.ts
 embedding-cache.json
 packages/plugin-buttplug/intiface-engine
